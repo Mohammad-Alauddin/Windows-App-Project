@@ -1,0 +1,13 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinStoreProject">
+
+    <ImageBrush x:Key="ShopBrush" ImageSource="Images/Shop02.jpg"/>
+    <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Background" Value="{ StaticResource ShopBrush}"></Setter>
+    </Style>
+    
+</ResourceDictionary>
+
+

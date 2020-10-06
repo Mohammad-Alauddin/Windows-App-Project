@@ -1,0 +1,133 @@
+﻿<Page
+    x:Class="WinStoreProject.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinStoreProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1908.523">
+
+
+    <StackPanel Style="{StaticResource StackPanelStyle}">
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="2" >
+
+
+                <RelativePanel Margin="0,0,10,50">
+
+                    <ListView x:ConnectionId='10' Name="SuperShopList"
+                  SelectionMode="Single"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.IsVerticalRailEnabled="True"
+                  ScrollViewer.VerticalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ScrollViewer.IsHorizontalRailEnabled="True" RenderTransformOrigin="0.539,0.45" Height="100" Width="1100"                                                  >
+                        <ListView.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal"  >
+
+
+                                    <TextBlock Text="Super Shop ID"  FontWeight="Bold" Width="150" Height ="30" FontSize="16"  HorizontalAlignment="Center" Foreground="DarkBlue" />
+                                    <TextBlock Text="Super Shop Name"  FontWeight="Bold" Width="166" Height ="30" FontSize="16" HorizontalAlignment="Center" Foreground="DarkBlue" />
+                                    <TextBlock Text="Super Shop Size"  FontWeight="Bold" Width="152" Height ="30" FontSize="16" HorizontalAlignment="Center" Foreground="DarkBlue"  />
+                                    <TextBlock Text="Super Shop Location"  FontWeight="Bold" Width="202" Height ="30" FontSize="16" HorizontalAlignment="Center" Foreground="DarkBlue"  />
+                                    <TextBlock Text="Super Shop Contact"  FontWeight="Bold" Width="189" Height ="30" FontSize="16" Foreground="DarkBlue"  />
+
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.HeaderTemplate>
+                        <ListView.ItemTemplate>
+                            <DataTemplate                                 >
+                                <StackPanel x:ConnectionId='13' Orientation="Horizontal" >
+
+                                    <TextBlock x:ConnectionId='14' Name="SuperShopId" 
+                                                               
+                                   Width="150" />
+
+                                    <TextBlock x:ConnectionId='15' Name="SuperShopName"
+                                                                 
+                                   Width="166" />
+
+                                    <TextBlock x:ConnectionId='16' Name="SuperShopSize"
+                                                                 
+                                    Width="152" />
+
+                                    <TextBlock x:ConnectionId='17' Name="SupeShopLocation"
+                                                                    
+                                  Width="202" />
+
+                                    <TextBlock x:ConnectionId='18' Name="SuperShopContact"
+                                                                   
+                                   Width="189" />
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </RelativePanel>
+
+
+
+            </Grid>
+
+        </Grid>
+
+
+
+        <ScrollViewer Height="380">
+            <StackPanel>
+
+
+
+                <TextBlock Height="100" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" ></TextBlock>
+                <TextBlock Text="Super Shop ID" Foreground="DarkBlue" FontSize="20" Width="400"  FontWeight="Bold" Height="42" HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+
+                <TextBox x:ConnectionId='2' x:Name="SuperShopId" FontSize="15" Height="40" Width="400" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"  />
+
+                <TextBlock Text="Super Shop Name" Foreground="DarkBlue" FontSize="20" Width="400"  FontWeight="Bold" Height="45" HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+
+                <TextBox x:ConnectionId='3' x:Name="SuperShopName" FontSize="15" Height="40" Width="400" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" />
+
+                <TextBlock Text="Super Shop Size" Foreground="DarkBlue" FontSize="20" Width="400"  FontWeight="Bold" Height="39" HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+
+                <TextBox x:ConnectionId='4' x:Name="SuperShopSize" FontSize="20" Height="40" Width="400" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" />
+
+                <TextBlock Text="Super Shop Location" Foreground="DarkBlue" FontSize="20" Width="400"  FontWeight="Bold" Height="39" HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+
+                <TextBox x:ConnectionId='5' x:Name="SuperShopLocation" FontSize="20" Height="40" Width="400" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"  />
+
+
+                <TextBlock Text="Super Shop Contact" Foreground="DarkBlue" FontSize="20" Width="400" FontWeight="Bold" Height="38" HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+
+                <TextBox x:ConnectionId='6' x:Name="SuperShopContact" FontSize="20" Height="40" Width="400" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"  />
+
+                <TextBlock   Height="5" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" ></TextBlock>
+                
+                
+
+                <Button x:ConnectionId='7' HorizontalAlignment="Center" Width="200" Foreground="Black" Background="Gray" FontSize="20"                     >SAVE</Button>
+                <TextBlock   Height="5" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Stretch" ></TextBlock>
+                <Button x:ConnectionId='8' HorizontalAlignment="Center" Width="200" Foreground="Black" Background="Gray" FontSize="20"                      >UPDATE</Button>
+                <TextBlock   Height="5" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Stretch" ></TextBlock>
+
+                <Button x:ConnectionId='9' HorizontalAlignment="Center" Width="200" Foreground="Black" Background="Gray" FontSize="20"                      >DELETE</Button>
+
+            </StackPanel>
+        </ScrollViewer>
+
+
+    </StackPanel>
+
+
+</Page>
+
